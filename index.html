@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="작은 아이디어를 큰 회사로 키우는 CEO 경영 시뮬레이터">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CEO 시뮬레이터">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <title>CEO 시뮬레이터</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1120;--panel:#121c2f;--panel2:#18253b;--line:#263650;--text:#f4f7fc;--muted:#99a9bf;--blue:#6d9bff;--cyan:#52d5ce;--gold:#ffd166;--red:#ff7777;--green:#6ee7a5;--radius:22px;--safe-bottom:env(safe-area-inset-bottom,0px)}
+    *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;background:radial-gradient(ellipse at 80% -15%,#1a3155 0,transparent 45%),var(--bg);color:var(--text);min-height:100vh;padding-bottom:calc(92px + var(--safe-bottom))}button{font:inherit;cursor:pointer}button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}.app{max-width:650px;margin:0 auto;padding:22px 16px 20px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 22px}.brand{display:flex;align-items:center;gap:11px}.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,#7ca5ff,#58ded0);display:grid;place-items:center;color:#081323;font-weight:1000;font-size:20px;box-shadow:0 8px 30px #477ae533}.brand-name{font-weight:850;letter-spacing:-.5px}.brand-sub{font-size:11px;color:var(--muted);margin-top:3px}.top-actions{display:flex;gap:8px}.icon-btn{width:42px;height:42px;border:1px solid var(--line);border-radius:14px;background:#111b2c;color:var(--text);font-size:18px}.hero{position:relative;overflow:hidden;border:1px solid #314568;border-radius:28px;padding:24px;background:linear-gradient(135deg,#1a3153 0%,#17243a 55%,#172f3d 100%);box-shadow:0 18px 50px #0002}.hero:after{content:"₩";position:absolute;font-size:180px;font-weight:900;color:#ffffff08;right:-2px;bottom:-65px;line-height:1;pointer-events:none}.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.5px;color:#b6c9f5;text-transform:uppercase}.hero h1{font-size:30px;line-height:1.18;letter-spacing:-1.2px;margin:10px 0 8px;max-width:390px}.hero p{font-size:13px;line-height:1.65;color:#b6c4d8;margin:0;max-width:390px}.month-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:23px}.month-pill{border:1px solid #ffffff24;background:#ffffff0c;padding:9px 12px;border-radius:12px;font-size:12px;font-weight:750}.phase{font-size:11px;color:#c4d4ea}.money-card{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(135deg,#182941,#121e30);margin-top:14px}.section-kicker{color:var(--muted);font-size:11px;letter-spacing:.7px;font-weight:800}.moneyline{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:8px}.money{font-size:35px;font-weight:900;letter-spacing:-1.5px}.money small{font-size:14px;color:#bdcadd;font-weight:650;letter-spacing:0}.money-change{font-size:12px;color:var(--green);font-weight:750}.mini-progress{height:7px;background:#27364b;border-radius:99px;margin-top:14px;overflow:hidden}.mini-progress span{display:block;height:100%;width:35%;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .25s}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px 12px;min-width:0}.metric-icon{font-size:19px}.metric-name{font-size:11px;color:var(--muted);margin-top:9px}.metric-value{font-size:22px;font-weight:850;letter-spacing:-.7px;margin-top:3px}.metric-value span{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0}.metric-bar{height:4px;background:#29384d;border-radius:9px;margin-top:10px;overflow:hidden}.metric-bar span{height:100%;display:block;background:var(--blue);border-radius:9px;transition:width .2s}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:27px 2px 12px}.section-head h2{font-size:18px;letter-spacing:-.5px;margin:0}.section-head p{font-size:11px;color:var(--muted);margin:5px 0 0}.hint{font-size:10px;color:var(--muted)}.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.decision{position:relative;text-align:left;border:1px solid var(--line);border-radius:19px;padding:16px 14px;background:var(--panel);color:var(--text);min-height:162px;transition:transform .16s,border-color .16s,background .16s}.decision:active{transform:scale(.985)}.decision.selected{border-color:var(--blue);background:linear-gradient(145deg,#1d3150,#172437);box-shadow:inset 0 0 0 1px #6d9bff33}.d-icon{width:38px;height:38px;border-radius:13px;background:#263a58;display:grid;place-items:center;font-size:20px;margin-bottom:12px}.d-cost{font-size:10px;color:var(--cyan);font-weight:800}.d-title{font-weight:800;margin:5px 0;font-size:14px}.d-desc{font-size:11px;color:var(--muted);line-height:1.5}.selected-mark{display:none;position:absolute;right:12px;top:12px;color:var(--cyan);font-size:16px}.selected .selected-mark{display:block}.event-card{margin-top:14px;background:#29253a;border:1px solid #50476d;border-radius:18px;padding:16px;display:flex;gap:12px}.event-symbol{font-size:23px}.event-text strong{font-size:13px;display:block;margin-bottom:5px}.event-text p{font-size:11px;line-height:1.55;color:#c6c0de;margin:0}.primary{width:100%;border:0;border-radius:17px;padding:17px 18px;margin-top:16px;background:linear-gradient(100deg,#83a7ff,#62d8d0);color:#071425;font-weight:900;font-size:15px;box-shadow:0 10px 30px #5d9de426}.primary:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}.disclaimer{font-size:10px;color:#6f8098;line-height:1.5;text-align:center;margin:14px 10px}.panel{border:1px solid var(--line);border-radius:20px;padding:17px;background:var(--panel);margin-top:12px}.chart{display:flex;align-items:end;gap:8px;height:135px;padding:12px 4px 0}.chart-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:end;height:100%;gap:7px;min-width:0}.chart-bar{width:100%;max-width:36px;min-height:3px;border-radius:7px 7px 3px 3px;background:linear-gradient(180deg,#65dbd2,#628cff);transition:height .3s}.chart-label{font-size:9px;color:var(--muted)}.chart-value{font-size:9px;color:#dce6f6;white-space:nowrap}.feed{display:flex;flex-direction:column;gap:12px}.feed-item{display:flex;gap:10px;align-items:start;padding-bottom:12px;border-bottom:1px solid #253248}.feed-item:last-child{padding:0;border:0}.feed-icon{width:32px;height:32px;border-radius:11px;background:#202e44;display:grid;place-items:center;flex-shrink:0}.feed-item strong{font-size:12px;display:block;margin:2px 0 4px}.feed-item p{font-size:11px;color:var(--muted);line-height:1.5;margin:0}.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:20;padding:9px 12px calc(9px + var(--safe-bottom));background:#0d1524ed;backdrop-filter:blur(18px);border-top:1px solid #29364b}.nav-inner{max-width:620px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.nav-btn{border:0;background:transparent;color:#8293ab;display:flex;flex-direction:column;align-items:center;gap:4px;padding:7px;border-radius:13px;font-size:10px;font-weight:750}.nav-btn span:first-child{font-size:19px}.nav-btn.active{background:#1b2b43;color:#a9c2ff}.screen{display:none}.screen.active{display:block}.tag{display:inline-flex;align-items:center;gap:5px;background:#1d3046;border-radius:8px;padding:6px 9px;font-size:10px;color:#b4c8e6;font-weight:750}.toast{position:fixed;left:50%;bottom:calc(92px + var(--safe-bottom));transform:translate(-50%,15px);opacity:0;pointer-events:none;z-index:30;background:#eef5ff;color:#132037;padding:12px 16px;border-radius:13px;box-shadow:0 9px 30px #0005;font-size:12px;font-weight:800;transition:all .2s;width:max-content;max-width:calc(100% - 32px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.overlay{position:fixed;inset:0;z-index:50;background:#020713b8;display:none;align-items:end;justify-content:center;padding:16px}.overlay.show{display:flex}.modal{width:100%;max-width:520px;border:1px solid var(--line);border-radius:25px 25px 20px 20px;background:#121d30;padding:24px;box-shadow:0 25px 90px #0008}.modal h2{font-size:22px;margin:8px 0}.modal p{color:var(--muted);font-size:13px;line-height:1.65}.modal-actions{display:flex;gap:9px}.secondary{flex:1;border:1px solid var(--line);background:#1b2a40;color:var(--text);padding:13px;border-radius:13px;font-weight:750}.danger{color:#ffaaaa;border-color:#6d3d48}.empty{text-align:center;color:var(--muted);font-size:12px;padding:22px}.footerline{font-size:10px;color:#62728a;text-align:center;margin-top:20px}.hidden{display:none!important}@media(min-width:540px){.app{padding-top:28px}.hero h1{font-size:34px}.decision{min-height:153px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">C.</div><div><div class="brand-name">CEO SIMULATOR</div><div class="brand-sub">YOUR COMPANY. YOUR RULES.</div></div></div>
+    <div class="top-actions"><button class="icon-btn" id="installBtn" aria-label="앱 설치" title="홈 화면에 설치">＋</button><button class="icon-btn" id="settingsBtn" aria-label="설정" title="설정">⚙</button></div>
+  </header>
+  <main>
+    <section class="screen active" id="screen-company">
+      <section class="hero">
+        <div class="eyebrow">MONTHLY CEO REPORT</div>
+        <h1>작은 아이디어를<br>큰 회사로.</h1>
+        <p>매달 한 가지 경영 결정을 내려 회사를 성장시켜 봐. 수익만 좇을지, 제품과 사람에 투자할지는 네 선택이야.</p>
+        <div class="month-row"><span class="month-pill" id="monthLabel">📅 1개월 차</span><span class="phase" id="phaseLabel">스타트업 단계</span></div>
+      </section>
+      <section class="money-card">
+        <div class="section-kicker">AVAILABLE CASH · 가용 자금</div>
+        <div class="moneyline"><div class="money" id="cashValue">₩100<small> 만원</small></div><div class="money-change" id="cashDelta">시작 자금</div></div>
+        <div class="mini-progress"><span id="cashProgress"></span></div>
+      </section>
+      <section class="metrics">
+        <div class="metric"><div class="metric-icon">👥</div><div class="metric-name">고객 수</div><div class="metric-value" id="customersValue">20<span> 명</span></div><div class="metric-bar"><span id="customersBar" style="width:20%"></span></div></div>
+        <div class="metric"><div class="metric-icon">⭐</div><div class="metric-name">기업 평판</div><div class="metric-value" id="repValue">50<span> 점</span></div><div class="metric-bar"><span id="repBar" style="width:50%"></span></div></div>
+        <div class="metric"><div class="metric-icon">💎</div><div class="metric-name">제품 품질</div><div class="metric-value" id="qualityValue">50<span> 점</span></div><div class="metric-bar"><span id="qualityBar" style="width:50%"></span></div></div>
+      </section>
+      <div class="section-head"><div><h2>이번 달 경영 전략</h2><p>회사의 상황에 맞는 행동 하나를 선택해.</p></div><span class="tag" id="actionTag">1회 선택</span></div>
+      <section class="decision-grid" id="decisionGrid">
+        <button class="decision selected" data-action="marketing"><span class="selected-mark">✓</span><div class="d-icon">📣</div><div class="d-cost">투자 ₩25만</div><div class="d-title">광고 마케팅</div><div class="d-desc">고객을 끌어모으고 브랜드 인지도를 높인다.</div></button>
+        <button class="decision" data-action="research"><span class="selected-mark">✓</span><div class="d-icon">🧪</div><div class="d-cost">투자 ₩35만</div><div class="d-title">제품 개발</div><div class="d-desc">제품 품질을 개선해 장기적인 경쟁력을 만든다.</div></button>
+        <button class="decision" data-action="hiring"><span class="selected-mark">✓</span><div class="d-icon">🧑‍💻</div><div class="d-cost">투자 ₩30만</div><div class="d-title">핵심 인재 채용</div><div class="d-desc">팀의 역량을 키우고 평판과 제품을 함께 개선한다.</div></button>
+        <button class="decision" data-action="saving"><span class="selected-mark">✓</span><div class="d-icon">🪙</div><div class="d-cost">비용 절감 +₩12만</div><div class="d-title">비용 최적화</div><div class="d-desc">지출을 줄여 현금을 확보한다. 다만 고객 만족도가 낮아질 수 있다.</div></button>
+      </section>
+      <section class="event-card"><div class="event-symbol" id="eventIcon">💡</div><div class="event-text"><strong id="eventTitle">CEO 브리핑</strong><p id="eventText">첫 달이야. 한 가지 전략을 고른 후 결정을 실행해 봐.</p></div></section>
+      <button class="primary" id="executeBtn">선택한 전략 실행하기　→</button>
+      <div class="disclaimer">모든 금액과 결과는 게임을 위한 가상 수치야. 실제 투자·사업 조언이 아니야.</div>
+    </section>
+    <section class="screen" id="screen-report">
+      <div class="hero"><div class="eyebrow">BUSINESS INTELLIGENCE</div><h1>회사는<br>잘 크고 있을까?</h1><p>매달 기록된 실적을 확인하고 다음 결정을 고민해 봐.</p></div>
+      <div class="section-head"><div><h2>자금 흐름</h2><p>월말 기준 보유 자금 · 만 원</p></div><span class="tag" id="reportStatus">진행 중</span></div>
+      <div class="panel"><div class="moneyline"><div><div class="section-kicker">CURRENT CASH</div><div class="money" style="font-size:28px" id="reportCash">₩100<small> 만원</small></div></div><span class="tag" id="reportMonths">1개월</span></div><div class="chart" id="cashChart"></div></div>
+      <div class="section-head"><div><h2>누적 경영 기록</h2><p>최근 의사 결정과 결과</p></div></div>
+      <div class="panel"><div class="feed" id="historyFeed"><div class="empty">아직 기록이 없어. 첫 번째 경영 결정을 내려 봐!</div></div></div>
+    </section>
+    <section class="screen" id="screen-goals">
+      <div class="hero"><div class="eyebrow">MISSION CONTROL</div><h1>CEO의 목표</h1><p>현금만 많다고 좋은 회사는 아니야. 고객과 평판, 제품 품질도 함께 관리해 봐.</p></div>
+      <div class="section-head"><div><h2>성공 조건</h2><p>12개월 안에 아래 조건을 달성해 봐.</p></div></div>
+      <div class="panel" id="goalsPanel"></div>
+      <div class="section-head"><div><h2>CEO 배지</h2><p>경영 성과에 따라 배지를 획득해.</p></div></div>
+      <div class="panel" id="badgesPanel"></div>
+    </section>
+  </main>
+  <div class="footerline">CEO SIMULATOR · 자동 저장됨</div>
+</div>
+<nav class="bottom-nav"><div class="nav-inner"><button class="nav-btn active" data-screen="company"><span>🏢</span><span>회사 운영</span></button><button class="nav-btn" data-screen="report"><span>📈</span><span>실적 보고서</span></button><button class="nav-btn" data-screen="goals"><span>🎯</span><span>목표와 배지</span></button></div></nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="eyebrow" id="modalEyebrow">MONTHLY REPORT</div><h2 id="modalTitle">경영 결정 완료</h2><p id="modalBody"></p><div class="modal-actions"><button class="secondary" id="modalClose">계속 운영하기</button><button class="secondary hidden" id="modalReset">새 회사 시작</button></div></div></div>
+<div class="overlay" id="settingsOverlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"><div class="modal"><div class="eyebrow">SETTINGS</div><h2 id="settingsTitle">게임 설정</h2><p>진행 상황은 이 기기의 브라우저에 자동 저장돼. 새 회사를 시작하면 현재 기록은 삭제돼.</p><div class="modal-actions"><button class="secondary" id="settingsClose">닫기</button><button class="secondary danger" id="resetBtn">초기화</button></div></div></div>
+<script>
+(()=>{
+  'use strict';
+  const SAVE_KEY='ceo-simulator-pwa-v1';
+  const actions={
+    marketing:{name:'광고 마케팅',icon:'📣',cost:25,customers:9,rep:7,quality:0,desc:'광고 캠페인이 신규 고객을 데려왔어. 브랜드 인지도도 올랐어.'},
+    research:{name:'제품 개발',icon:'🧪',cost:35,customers:3,rep:3,quality:13,desc:'제품이 더 좋아졌어. 품질 개선이 장기적인 경쟁력으로 이어질 거야.'},
+    hiring:{name:'핵심 인재 채용',icon:'🧑‍💻',cost:30,customers:4,rep:8,quality:7,desc:'유능한 동료들이 합류했어. 평판과 제품 역량이 함께 올랐어.'},
+    saving:{name:'비용 최적화',icon:'🪙',cost:-12,customers:-2,rep:-4,quality:-2,desc:'불필요한 지출을 줄였어. 단기 자금은 늘었지만 고객 경험에 작은 영향이 있었어.'}
+  };
+  const randomEvents=[
+    {icon:'🎉',title:'입소문이 퍼졌다!',text:'고객들이 제품을 추천하기 시작했어.',cash:0,customers:5,rep:4,quality:0},
+    {icon:'🚚',title:'배송비가 올랐다',text:'예상치 못한 운영비가 발생했어.',cash:-12,customers:0,rep:0,quality:0},
+    {icon:'📝',title:'긍정적인 리뷰',text:'좋은 후기가 올라와 기업 평판이 올랐어.',cash:0,customers:2,rep:6,quality:0},
+    {icon:'💡',title:'팀의 새로운 아이디어',text:'팀이 개선점을 찾아 제품 품질이 향상됐어.',cash:0,customers:0,rep:1,quality:5},
+    {icon:'🌧️',title:'시장 분위기 위축',text:'소비가 잠시 줄어 이번 달 매출에 영향이 있었어.',cash:-8,customers:-2,rep:0,quality:0},
+    {icon:'🤝',title:'협업 제안 도착',text:'새로운 파트너가 관심을 보이고 있어.',cash:0,customers:3,rep:3,quality:1}
+  ];
+  const initial=()=>({month:1,cash:100,customers:20,rep:50,quality:50,selected:'marketing',ended:false,result:'',history:[],cashHistory:[100],badges:[],lastDelta:0,brief:{icon:'💡',title:'CEO 브리핑',text:'첫 달이야. 한 가지 전략을 고른 후 결정을 실행해 봐.'}});
+  let state=initial();
+  const $=id=>document.getElementById(id);
+  const money=n=>Math.round(n).toLocaleString('ko-KR');
+  const clamp=n=>Math.max(0,Math.min(100,n));
+  function save(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state))}catch(e){console.warn('저장할 수 없어요',e)}}
+  function load(){try{const s=localStorage.getItem(SAVE_KEY);if(s){const p=JSON.parse(s);if(p&&typeof p.cash==='number'&&Array.isArray(p.history))state={...initial(),...p}}}catch(e){console.warn('저장 데이터를 읽지 못했어요',e)}}
+  function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2200)}
+  function showModal(title,body,finished=false){$('modalTitle').textContent=title;$('modalBody').textContent=body;$('modalReset').classList.toggle('hidden',!finished);$('modalClose').textContent=finished?'결과 확인':'계속 운영하기';$('modalOverlay').classList.add('show')}
+  function phase(){if(state.month<=3)return '스타트업 단계';if(state.month<=7)return '성장 단계';return '스케일업 단계'}
+  function render(){
+    $('monthLabel').textContent=state.ended?'🏁 경영 종료':`📅 ${state.month}개월 차`;$('phaseLabel').textContent=state.ended?state.result:phase();
+    $('cashValue').innerHTML=`${money(state.cash)}<small> 만 원</small>`;$('cashDelta').textContent=state.history.length?(state.lastDelta>=0?`▲ ${money(state.lastDelta)}만`:`▼ ${money(Math.abs(state.lastDelta))}만`):'시작 자금';$('cashDelta').style.color=state.lastDelta<0?'var(--red)':'var(--green)';$('cashProgress').style.width=clamp(state.cash/3)+'%';
+    $('customersValue').innerHTML=`${state.customers}<span> 명</span>`;$('repValue').innerHTML=`${state.rep}<span> 점</span>`;$('qualityValue').innerHTML=`${state.quality}<span> 점</span>`;$('customersBar').style.width=clamp(state.customers)+'%';$('repBar').style.width=state.rep+'%';$('qualityBar').style.width=state.quality+'%';
+    document.querySelectorAll('.decision').forEach(b=>{b.classList.toggle('selected',b.dataset.action===state.selected);b.disabled=state.ended});$('executeBtn').disabled=state.ended;$('executeBtn').textContent=state.ended?'경영이 종료됐어':'선택한 전략 실행하기　→';$('actionTag').textContent=state.ended?'종료':'1회 선택';$('eventIcon').textContent=state.brief.icon;$('eventTitle').textContent=state.brief.title;$('eventText').textContent=state.brief.text;
+    renderReport();renderGoals();
+  }
+  function renderReport(){
+    $('reportCash').innerHTML=`${money(state.cash)}<small> 만 원</small>`;$('reportMonths').textContent=`${state.history.length}개월 기록`;$('reportStatus').textContent=state.ended?'종료': '진행 중';
+    const vals=state.cashHistory.slice(-8);const max=Math.max(100,...vals.map(v=>Math.max(0,v)));$('cashChart').innerHTML=vals.map((v,i)=>{const h=Math.max(4,Math.max(0,v)/max*85);return `<div class="chart-col"><div class="chart-value">${Math.round(v)}</div><div class="chart-bar" style="height:${h}%"></div><div class="chart-label">${Math.max(1,state.month-vals.length+i)}월</div></div>`}).join('');
+    const feed=$('historyFeed');if(!state.history.length){feed.innerHTML='<div class="empty">아직 기록이 없어. 첫 번째 경영 결정을 내려 봐!</div>';return}
+    feed.innerHTML=state.history.slice().reverse().map(h=>`<div class="feed-item"><div class="feed-icon">${escapeHTML(h.icon)}</div><div><strong>${h.month}개월 차 · ${escapeHTML(h.action)}</strong><p>${escapeHTML(h.summary)}<br>매출 ${money(h.revenue)}만 원 · 월말 자금 ${money(h.cash)}만 원</p></div></div>`).join('');
+  }
+  function renderGoals(){
+    const goals=[{label:'보유 자금 250만 원 이상',ok:state.cash>=250,cur:money(state.cash),pct:clamp(state.cash/250*100)},{label:'고객 30명 이상',ok:state.customers>=30,cur:`${state.customers}명`,pct:clamp(state.customers/30*100)},{label:'기업 평판 65점 이상',ok:state.rep>=65,cur:`${state.rep}점`,pct:state.rep/65*100},{label:'제품 품질 60점 이상',ok:state.quality>=60,cur:`${state.quality}점`,pct:state.quality/60*100}];
+    $('goalsPanel').innerHTML=goals.map(g=>`<div style="margin:0 0 18px"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;margin-bottom:8px"><span>${g.ok?'✅':'⬜'} ${g.label}</span><strong>${g.cur}</strong></div><div class="mini-progress" style="margin:0"><span style="width:${g.pct}%;background:${g.ok?'var(--green)':'linear-gradient(90deg,var(--blue),var(--cyan))'}"></span></div></div>`).join('')+`<div class="tag">${state.ended?(state.result==='목표 달성'?'목표 달성 성공':'경영 종료'):`현재 ${Math.min(state.month,12)-1}/12개월 진행`}</div>`;
+    const badgeDefs=[{id:'first',icon:'🌱',name:'첫걸음',desc:'첫 번째 경영 결정 실행',ok:state.history.length>=1},{id:'customers',icon:'👥',name:'고객 중심',desc:'고객 30명 달성',ok:state.customers>=30},{id:'reputation',icon:'⭐',name:'신뢰받는 기업',desc:'평판 65점 달성',ok:state.rep>=65},{id:'quality',icon:'💎',name:'제품 장인',desc:'제품 품질 60점 달성',ok:state.quality>=60},{id:'rich',icon:'💰',name:'자금 확보',desc:'자금 250만 원 달성',ok:state.cash>=250}];
+    badgeDefs.forEach(b=>{if(b.ok&&!state.badges.includes(b.id))state.badges.push(b.id)});save();$('badgesPanel').innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'+badgeDefs.map(b=>`<div style="border:1px solid ${b.ok?'#3c6b64':'var(--line)'};border-radius:15px;padding:13px;background:${b.ok?'#17332f':'#121c2f'};opacity:${b.ok?1:.58}"><div style="font-size:24px">${b.icon}</div><div style="font-size:12px;font-weight:800;margin-top:8px">${b.ok?'획득 · ':''}${b.name}</div><div style="font-size:10px;line-height:1.5;color:var(--muted);margin-top:4px">${b.desc}</div></div>`).join('')+'</div>';
+  }
+  function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function run(){if(state.ended)return;const a=actions[state.selected];if(!a)return;if(state.cash-a.cost<0&&a.cost>0){showModal('자금이 부족해!',`${a.name}을 실행하려면 ${money(a.cost)}만 원이 필요해. 비용 최적화 전략으로 자금을 확보하거나 다른 선택을 해 봐.`);return}
+    const oldCash=state.cash;const currentRevenue=Math.max(0,Math.round(state.customers*2+state.quality*.18));
+    let cash=state.cash+currentRevenue-a.cost;let customers=state.customers+a.customers;let rep=clamp(state.rep+a.rep);let quality=clamp(state.quality+a.quality);
+    const event=Math.random()<.72?randomEvents[Math.floor(Math.random()*randomEvents.length)]:{icon:'📊',title:'시장 안정',text:'이번 달 시장에는 큰 변동이 없었어.',cash:0,customers:0,rep:0,quality:0};
+    cash+=event.cash;customers=Math.max(0,customers+event.customers);rep=clamp(rep+event.rep);quality=clamp(quality+event.quality);
+    const finalDelta=cash-oldCash;const monthDone=state.month;
+    const summary=`${a.desc} ${event.title} — ${event.text}`;
+    state.cash=cash;state.customers=customers;state.rep=rep;state.quality=quality;state.lastDelta=finalDelta;state.cashHistory.push(cash);state.history.push({month:monthDone,action:a.name,icon:a.icon,revenue:currentRevenue,cost:a.cost,delta:finalDelta,cash,summary});
+    state.brief={icon:event.icon,title:event.title,text:event.text};state.month++;
+    const won=state.cash>=250&&state.customers>=30&&state.rep>=65&&state.quality>=60;
+    const bankrupt=state.cash<0;
+    const limit=state.month>12;
+    if(won||bankrupt||limit){state.ended=true;state.result=won?'목표 달성':bankrupt?'자금 부족':'12개월 종료';}
+    save();render();
+    if(won)showModal('🎉 경영 목표 달성!',`축하해! ${monthDone}개월 만에 자금, 고객, 평판, 품질 목표를 모두 달성했어. 최종 자금은 ${money(state.cash)}만 원이야. 새로운 회사로 다시 도전해 볼 수도 있어.`,true);
+    else if(bankrupt)showModal('회사가 자금난에 빠졌어',`운영 자금이 부족해졌어. 최종 자금 ${money(state.cash)}만 원. 이번 경영 기록을 살펴보고 다시 도전해 봐.`,true);
+    else if(limit)showModal('12개월 경영 종료',`1년 동안 회사를 운영했어. 최종 자금 ${money(state.cash)}만 원, 고객 ${state.customers}명, 평판 ${state.rep}점, 품질 ${state.quality}점이야.`,true);
+    else showModal(`${monthDone}개월 차 경영 보고`,`${a.name} 실행 완료. 이번 달 매출 ${money(currentRevenue)}만 원, 월말 자금 ${money(state.cash)}만 원이야. ${event.title}: ${event.text}`);
+  }
+  document.querySelectorAll('.decision').forEach(b=>b.addEventListener('click',()=>{if(state.ended)return;state.selected=b.dataset.action;document.querySelectorAll('.decision').forEach(x=>x.classList.toggle('selected',x===b));toast(`${actions[state.selected].name} 선택됨`);save()}));
+  $('executeBtn').addEventListener('click',run);$('modalClose').addEventListener('click',()=>$('modalOverlay').classList.remove('show'));$('modalReset').addEventListener('click',()=>{state=initial();save();render();$('modalOverlay').classList.remove('show');toast('새 회사가 시작됐어!')});
+  document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav-btn').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('active',x.id==='screen-'+b.dataset.screen));window.scrollTo({top:0,behavior:'smooth'});}));
+  $('settingsBtn').addEventListener('click',()=>$('settingsOverlay').classList.add('show'));$('settingsClose').addEventListener('click',()=>$('settingsOverlay').classList.remove('show'));$('settingsOverlay').addEventListener('click',e=>{if(e.target===$('settingsOverlay'))$('settingsOverlay').classList.remove('show')});$('modalOverlay').addEventListener('click',e=>{if(e.target===$('modalOverlay'))$('modalOverlay').classList.remove('show')});
+  $('resetBtn').addEventListener('click',()=>{if(confirm('현재 회사의 모든 기록을 삭제하고 새로 시작할까?')){state=initial();save();render();$('settingsOverlay').classList.remove('show');toast('기록을 초기화했어.')}});
+  let installPrompt=null;const installButton=$('installBtn');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installButton.textContent='↓';});installButton.addEventListener('click',async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}else{showModal('홈 화면에 추가하기','안드로이드 Chrome은 메뉴(⋮)에서 “앱 설치” 또는 “홈 화면에 추가”를 선택해. iPhone Safari는 공유 버튼을 누른 뒤 “홈 화면에 추가”를 선택하면 돼. 이 기능은 앱 파일을 HTTPS 주소로 열었을 때 사용할 수 있어.')}});
+  load();render();if('serviceWorker' in navigator&&location.protocol!=='file:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(e=>console.log('Offline support unavailable',e)))}
+})();
+</script>
+</body>
+</html>
