@@ -1,17 +1,1 @@
-{
-  "id": "./index.html",
-  "name": "CEO 경영 시뮬레이터",
-  "short_name": "CEO 시뮬레이터",
-  "description": "작은 아이디어를 큰 회사로 키우는 CEO 경영 시뮬레이터",
-  "lang": "ko-KR",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#0b1120",
-  "theme_color": "#101827",
-  "icons": [
-    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
-  ]
-}
+{"name":"CEO Simulator - 나만의 기업","short_name":"CEO Simulator","start_url":"./index.html","scope":"./","display":"standalone","background_color":"#080d19","theme_color":"#0b1020","icons":[{"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}
